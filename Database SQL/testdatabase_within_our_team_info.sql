@@ -1,11 +1,8 @@
--- phpMyAdmin SQL Dump
--- version 5.2.0
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1:3306
--- Generation Time: Mar 24, 2024 at 09:19 AM
--- Server version: 8.0.31
--- PHP Version: 8.0.26
+-- Check if the database exists and drop it if it does
+DROP DATABASE IF EXISTS testdatabase;
+
+-- Create a new database
+CREATE DATABASE testdatabase;
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
