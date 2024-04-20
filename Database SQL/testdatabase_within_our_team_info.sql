@@ -56,10 +56,10 @@ INSERT INTO `developer` (`ID`, `Name`, `ImagePath`, `Description`) VALUES
 DROP TABLE IF EXISTS `feedback`;
 CREATE TABLE IF NOT EXISTS `feedback` (
   `ID` int NOT NULL,
-  `Name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Std_Course_Type` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Feedback` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Image` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `Name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Std_Course_Type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Feedback` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -79,10 +79,10 @@ INSERT INTO `feedback` (`ID`, `Name`, `Std_Course_Type`, `Feedback`, `Image`) VA
 DROP TABLE IF EXISTS `newcourses`;
 CREATE TABLE IF NOT EXISTS `newcourses` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `description` text COLLATE utf8mb4_general_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `rating` decimal(2,1) NOT NULL,
-  `image_path` text COLLATE utf8mb4_general_ci NOT NULL,
+  `image_path` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `price` decimal(10,2) NOT NULL,
   `Status` tinyint DEFAULT '1',
   PRIMARY KEY (`id`)
@@ -194,9 +194,9 @@ INSERT INTO `social_media` (`Id`, `DeveloperID`, `PlatformId`, `Url`) VALUES
 DROP TABLE IF EXISTS `teacher`;
 CREATE TABLE IF NOT EXISTS `teacher` (
   `ID` int NOT NULL AUTO_INCREMENT,
-  `Name` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Image` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `Active` varchar(10) COLLATE utf8mb4_general_ci NOT NULL,
+  `Name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `Active` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -219,11 +219,11 @@ INSERT INTO `teacher` (`ID`, `Name`, `Image`, `Active`) VALUES
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_general_ci NOT NULL,
+  `username` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
   `isAdmin` tinyint(1) DEFAULT '0',
-  `userCart` text COLLATE utf8mb4_general_ci,
+  `userCart` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`),
   UNIQUE KEY `email` (`email`)
