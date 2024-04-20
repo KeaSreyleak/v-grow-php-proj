@@ -125,7 +125,7 @@
                                     <form method="post" action="updateDeveloper.php">
                                         <div class="mb-3">
                                         <label for="Name" class="form-label">Id</label>
-                                        <input type="text" class="form-control" name="Id" value="' . $developer['Id'] . '">
+                                        <input type="text" class="form-control" name="Id" value="' . $developer['Id'] . '" readonly>
                                         </div>
                                         <div class="mb-3">
                                         <label for="Name" class="form-label">Name</label>
